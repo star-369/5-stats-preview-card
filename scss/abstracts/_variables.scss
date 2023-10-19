@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+:root {
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 80%, 34%);
+
+  --white: hsl(0, 0%, 100%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+
+  --inter-family: "Inter", sans-serif;
+  --lexend-deca-family: "Lexend Deca", sans-serif;
+}
+
+$breakpoints: (
+  "small": 640px,
+  "medium": 768px,
+  "large": 1024px,
+  "xl": 1280px,
+  "2xl": 1536px,
+);

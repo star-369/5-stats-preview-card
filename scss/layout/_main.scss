@@ -1,0 +1,26 @@
+@use "../abstracts/mixins" as *;
+
+body {
+  background: var(--very-dark-blue);
+  padding: 3rem 0;
+  @include grid-center;
+}
+main {
+  width: 300px;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero {
+  position: relative;
+}
+@include breakpoints(medium) {
+  main {
+    width: 930px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .hero {
+      order: 2;
+    }
+  }
+}

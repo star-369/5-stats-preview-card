@@ -1,0 +1,57 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins" as *;
+
+.card {
+  padding: 2rem;
+  background: var(--dark-desaturated-blue);
+  h1 {
+    font: 700 1.5rem/2rem var(--inter-family);
+    color: var(--white);
+    text-align: center;
+    mark {
+      background: none;
+      color: var(--soft-violet);
+    }
+  }
+  > p {
+    margin: 1rem 0;
+    font: 400 0.75rem/1.5rem var(--inter-family);
+    color: var(--transparent-white);
+    text-align: center;
+  }
+  &__service--list {
+    margin-bottom: 1rem;
+    text-align: center;
+    h2 {
+      font: 700 1.25rem var(--inter-family);
+      color: var(--white);
+      margin-bottom: 0.25rem;
+    }
+    p {
+      font: 400 0.75rem var(--inter-family);
+      color: var(--slightly-transparent-white);
+      letter-spacing: 1px;
+    }
+  }
+  @include breakpoints(medium) {
+    padding: 3rem;
+    padding-right: 5rem;
+    &__service--list,
+    h1,
+    p {
+      text-align: left;
+    }
+    h1 {
+      margin-block-end: 2rem;
+      font: 700 2rem/2.5rem var(--inter-family);
+    }
+    > p {
+      font-size: 0.8rem;
+      margin-block-end: 3rem;
+    }
+    &__service {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

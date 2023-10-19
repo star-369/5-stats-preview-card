@@ -1,0 +1,194 @@
+:root {
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+
+  --white: hsl(0, 0%, 100%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+
+  --inter-family: "Inter", sans-serif;
+  --lexend-deca-family: "Lexend Deca", sans-serif;
+  --light-weights: 400;
+  --bold-weight: 700;
+}
+
+/*Andy Bell CSS Reset*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--very-dark-blue);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  width: 310px;
+  background: var(--dark-desaturated-blue);
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+section:nth-child(1) {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.overlay {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  opacity: 0.5;
+  transition: opacity 0.4s ease-in-out;
+  background: var(--soft-violet);
+  height: 100%;
+  width: 50%;
+}
+
+.card {
+  padding: 2rem;
+}
+
+h1 {
+  font: var(--bold-weight) 1.5rem/1.75rem var(--inter-family);
+  color: var(--white);
+}
+
+mark {
+  background: none;
+  color: var(--soft-violet);
+}
+
+.card > p {
+  margin: 1rem 0;
+  font: var(--light-weights) 0.75rem/1.5rem var(--inter-family);
+
+  color: var(--transparent-white);
+}
+
+h1,
+p,
+.card__service {
+  text-align: center;
+}
+
+.card__service--list {
+  margin-bottom: 1rem;
+}
+
+.card__service--list > h2 {
+  font: var(--bold-weight) 1.25rem var(--inter-family);
+  color: var(--white);
+  margin-bottom: 0.25rem;
+}
+
+.card__service--list > p {
+  font: var(--light-weights) 0.75rem var(--inter-family);
+  color: var(--slightly-transparent-white);
+  letter-spacing: 1px;
+}
+
+@media (min-width: 980px) {
+  main {
+    width: 900px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section:nth-child(1) {
+    order: 2;
+  }
+  .card {
+    padding: 4rem;
+  }
+
+  h1,
+  p {
+    text-align: left;
+  }
+  h1 {
+    font-size: 1.75rem;
+    margin-block-end: 2rem;
+  }
+  .card > p {
+    font-size: 1rem;
+    margin-block-end: 3rem;
+  }
+  .card__service {
+    display: flex;
+    justify-content: space-between;
+  }
+}

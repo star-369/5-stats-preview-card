@@ -1,0 +1,11 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins" as *;
+.overlay {
+  position: absolute;
+  top: 0;
+  opacity: 0.6;
+  transition: opacity 0.1s ease-in-out;
+  background: var(--soft-violet);
+  height: 100%;
+  width: 100%;
+}
