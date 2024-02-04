@@ -1,0 +1,64 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins" as *;
+
+.card {
+  padding: 2rem;
+  background: var(--dark-desaturated-blue);
+  height: auto;
+  h1 {
+    font: 700 1.5rem/2rem var(--inter-family);
+    color: var(--white);
+    text-align: center;
+    mark {
+      background: none;
+      color: var(--soft-violet);
+    }
+  }
+  > p {
+    margin: 1rem 0 2rem;
+    font: 400 1rem/1.5rem var(--inter-family);
+    color: var(--slightly-transparent-white);
+    text-align: center;
+  }
+  &__service {
+    &--list {
+      margin-bottom: 1.5rem;
+      text-align: center;
+      h2 {
+        font: 700 1.5rem var(--inter-family);
+        color: var(--white);
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font: 400 0.75rem/1rem var(--inter-family);
+        color: var(--slightly-transparent-white);
+        letter-spacing: 1px;
+      }
+    }
+  }
+  @include breakpoints(medium) {
+    padding: 4rem 5.5rem;
+    padding-right: 5rem;
+    &__service--list,
+    h1,
+    p {
+      text-align: left;
+      line-height: 1.6;
+    }
+    h1 {
+      margin-block-end: 2rem;
+      font: 700 2.25rem/2.5rem var(--inter-family);
+    }
+    > p {
+      font-size: 1rem;
+    }
+    &__service {
+      margin-top: 4rem;
+      display: flex;
+      justify-content: space-between;
+      &--list {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

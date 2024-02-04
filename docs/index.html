@@ -10,7 +10,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Frontend Mentor | Stats preview card component</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,14 +41,15 @@
         <picture>
           <source
             media="(min-width:768px)"
-            srcset="images/image-header-desktop.jpg"
+            srcset="images/image-header-desktop.jpg 550w"
+            sizes="(min-width:768px)"
           />
           <source
             media="(min-width:300px)"
             srcset="images/image-header-mobile.jpg 654w"
             sizes="(min-width:300px) "
           />
-          <img src="images/image-header-mobile.jpg" alt="hero" />
+          <img src="images/image-header-desktop.jpg" alt="illustration" />
         </picture>
         <div class="overlay"></div>
       </section>
